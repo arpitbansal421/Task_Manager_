@@ -109,3 +109,16 @@ input:hover{
   cursor: pointer;
   border-radius: 50%;
 }
+
+.click_btn{
+
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: aqua;
+  font-size: larger;
+}
+
+.click_btn:hover{
+  background-color: rgb(219, 116, 116);
+}

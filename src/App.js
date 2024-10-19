@@ -14,9 +14,10 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const [dragTask, setDragTask] = useState(null);
   const [updateItem, setUpdateItem] = useState(null);
-  const [filterPriorityTODO, setFilterPriorityTODO] = useState('All'); // Filter for TODO
-  const [filterPriorityDOING, setFilterPriorityDOING] = useState('All'); // Filter for DOING
-  const [filterPriorityDONE, setFilterPriorityDONE] = useState('All'); // Filter for DONE
+  const [filterPriority, setFilterPriority] = useState('All'); // Filter by priority
+  const [filterPriorityTODO, setFilterPriorityTODO] = useState('All');
+  const [filterPriorityDOING, setFilterPriorityDOING] = useState('All');
+  const [filterPriorityDONE, setFilterPriorityDONE] = useState('All');
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -24,6 +25,12 @@ function App() {
 
   const handleKeyDown = (e) => {
     if (e.keyCode === 13) { // Enter pressed
+      handleAddTask();
+    }
+  };
+
+  const handleAddTask = () => {
+    if (value.trim()) {
       if (updateItem) { // User is coming for an update
         const obj = {
           title: value,
@@ -102,9 +109,9 @@ function App() {
     setPriority(task.priority); // Set current task priority for editing
   };
 
-  const filteredTasks = (status, filterPriority) => {
+  const filteredTasks = (status, filter) => {
     return tasks.filter((task) => {
-      return task.status === status && (filterPriority === 'All' || task.priority === filterPriority);
+      return task.status === status && (filter === 'All' || task.priority === filter);
     });
   };
 
@@ -118,6 +125,7 @@ function App() {
         onKeyDown={handleKeyDown}
         placeholder="Enter task title"
       />
+      <button onClick={handleAddTask} className='click_btn'>Add Task</button> {/* Button for mobile users */}
 
       {/* Task Board */}
       <div className='board'>
