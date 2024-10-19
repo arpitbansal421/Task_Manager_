@@ -1,0 +1,125 @@
+.App {
+  text-align: center;
+  background-color: rgb(221, 156, 71);
+  height: 100vh;
+  width: 100%;
+}
+
+.heading{
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: larger;
+  padding: 4px;
+
+
+  font-size: larger;
+  font-weight: bolder;
+}
+input{
+  border: 2px solid;
+  border-radius: 4px;
+  width: 650px;
+  height: 35px;
+  font-size: 20px;
+  padding: 5px;
+  margin: 10px;
+
+  
+}
+
+input:hover{
+
+   outline: none;
+}
+.board{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  
+ 
+}
+
+.todo-col{
+  background-color: rgb(215, 87, 48);
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.doing-col{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: large;
+  font: 800;
+  
+  background-color: rgb(219, 219, 108);;
+  padding: 10px ;
+}
+.done-col{
+  background-color: lightgreen;
+  padding: 10px;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.todo{
+  width: 33%;
+  height: 400px;
+}
+.doing{
+  width: 33%;
+  height: 400px;
+  margin: 0 10px;
+}
+.done{
+  width: 33%;
+  height: 400px;
+}
+
+.task-item{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  border: 0.7px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: grab;
+  font-size: 20px;
+  margin: 10px 0;
+  background-color: pink;
+}
+.task-item:hover{
+  background-color: lightgray;
+}
+.btn{
+  width: 70px;
+  height: 70px;
+  padding: 5px;
+}
+
+.btn:hover{
+  background-color: purple;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.click_btn{
+
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: aqua;
+  font-size: larger;
+}
+
+.click_btn:hover{
+  background-color: rgb(219, 116, 116);
+}
