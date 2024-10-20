@@ -3,6 +3,7 @@ Hi Have build this Task Manager using React.js, Tailwind Css, JavaScript, React 
 Also We priortize our Task and filter all high priority, low Priority Task.
 
 **Steps for creation of Task Manager**
+
 Initialize Project: I started by setting up a React.js project using create-react-app. This bootstrapped my application with the required dependencies.
 
 Set Up State Management:
